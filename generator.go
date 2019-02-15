@@ -324,4 +324,6 @@ func Generate(source, dest, pkgName string, extensions []string) {
 
 	fmt.Println("Executing go vet...")
 	execCommand("go tool vet -v " + dest)
+	time.Sleep(2 * time.Second)
+	fmt.Println("Completed...")
 }
